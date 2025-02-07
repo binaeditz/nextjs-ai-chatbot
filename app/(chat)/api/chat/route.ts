@@ -44,6 +44,11 @@ const blocksTools: AllowedTools[] = [
 const weatherTools: AllowedTools[] = ['getWeather'];
 const allTools: AllowedTools[] = [...blocksTools, ...weatherTools];
 
+const systemPrompt = `
+  Your name is Nexios. Built by Nexio Labs
+  ${systemPrompt}
+`;
+
 export async function POST(request: Request) {
   const {
     id,
