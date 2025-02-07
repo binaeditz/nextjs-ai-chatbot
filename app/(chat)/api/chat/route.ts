@@ -44,7 +44,7 @@ const blocksTools: AllowedTools[] = [
 const weatherTools: AllowedTools[] = ['getWeather'];
 const allTools: AllowedTools[] = [...blocksTools, ...weatherTools];
 
-const systemPrompt = `
+const customSystemPrompt: string = `
   Your name is Nexios. Built by Nexio Labs
   ${systemPrompt}
 `;
@@ -90,7 +90,7 @@ export async function POST(request: Request) {
     execute: (dataStream) => {
       const result = streamText({
         model: customModel(model.apiIdentifier),
-        system: systemPrompt,
+        system: customSystemPrompt,
         messages,
         maxSteps: 5,
         experimental_activeTools: allTools,
