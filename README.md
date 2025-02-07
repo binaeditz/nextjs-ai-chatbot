@@ -1,10 +1,10 @@
 <a href="https://chat.vercel.ai/">
-  <img alt="Next.js 14 and App Router-ready AI chatbot." src="app/(chat)/opengraph-image.png">
-  <h1 align="center">Next.js AI Chatbot</h1>
+  <img alt="Ask anything from Nexios..." src="app/(chat)/opengraph-image.png">
+  <h1 align="center">Nexios - Ask Anything...</h1>
 </a>
 
 <p align="center">
-  An Open-Source AI Chatbot Template Built With Next.js and the AI SDK by Vercel.Powered By Nexios
+  An Open-Source AI Model built by Vercel & Nexios.
 </p>
 
 <p align="center">

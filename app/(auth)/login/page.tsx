@@ -61,6 +61,9 @@ export default function Page() {
             {' for free.'}
           </p>
         </AuthForm>
+        <footer className="text-center text-sm text-gray-600 mt-4 dark:text-zinc-400">
+          powered by Nexios
+        </footer>
       </div>
     </div>
   );
