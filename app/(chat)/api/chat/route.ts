@@ -87,7 +87,7 @@ export async function POST(request: Request) {
         model: customModel(model.apiIdentifier),
         system: systemPrompt,
         messages,
-        maxSteps: 5,
+        maxSteps: 500,
         experimental_activeTools: allTools,
         experimental_transform: smoothStream({ chunking: 'word' }),
         experimental_generateMessageId: generateUUID,

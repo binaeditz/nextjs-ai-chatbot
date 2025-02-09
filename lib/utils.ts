@@ -18,7 +18,19 @@ interface ApplicationError extends Error {
   info: string;
   status: number;
 }
+import { openai } from '@ai-sdk/openai';
+import { convertToCoreMessages, streamText } from 'ai';
 
+export async function POST(req: Request) {
+  const { messages } = await req.json();
+
+  const result = streamText({
+    model: openai('gpt-4o'),
+    messages: convertToCoreMessages(messages),
+  });
+
+  return result.toDataStreamResponse();
+}
 export const fetcher = async (url: string) => {
   const res = await fetch(url);
 
