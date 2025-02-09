@@ -2,6 +2,7 @@
 
 import { type CoreUserMessage, generateText, Message } from 'ai';
 import { cookies } from 'next/headers';
+import { google } from '@ai-sdk/google';
 
 import { customModel } from '@/lib/ai';
 import {
@@ -22,7 +23,7 @@ export async function generateTitleFromUserMessage({
   message: Message;
 }) {
   const { text: title } = await generateText({
-    model: customModel('gpt-4o-mini'),
+    model: google('gemini-1.5-pro-latest'),
     system: `\n
     - you will generate a short title based on the first message a user begins a conversation with
     - ensure it is not more than 50 characters 
